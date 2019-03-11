@@ -89,6 +89,41 @@ body {
   text-decoration: none;
 }
 
+.menu {
+  position: fixed;
+  z-index: 0;
+  top: 80px;
+  width: 100%;
+  left: 0;
+  padding: 12px 0;
+  background-color: #507fe1;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.menu_activ {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.menu__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
 .menu_button {
   display: -webkit-box;
   display: -ms-flexbox;
