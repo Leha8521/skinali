@@ -123,11 +123,13 @@ body {
   background-color: #507fe1;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+  opacity: 0;
 }
 
 .menu_activ {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  opacity: 1;
 }
 
 .menu__nav {
@@ -220,10 +222,11 @@ body {
 }
 
 .hero {
-  background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat center top 80px;
+  background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat center top;
   background-size: contain;
-  padding-top: 180px;
+  padding-top: 120px;
   padding-bottom: 273px;
+  margin-top: 80px;
 }
 
 .hero__title {
@@ -240,8 +243,8 @@ body {
 
 @media (max-width: 991px) {
   .hero {
-    background-size: cover;
-    background-position: top left 30%;
+    background-size: 100%;
+    background-position: top right;
   }
 }
 /*# sourceMappingURL=style.css.map */
