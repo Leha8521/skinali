@@ -1,6 +1,8 @@
 body
     +light
     color: $text-color
+img
+    max-width: 100%
 .button-o
     border: 2px solid $primery
     padding: 17px 22px
@@ -19,6 +21,31 @@ body
     background-color: $primery
     color: #fff
     +bold
+    &-fitting
+        text-transform: uppercase
+        padding: 10px
+        color: $primery
+        font-size: 11px
+        background-color: #fff
+        border: none
+        height: 30px
+    &-add
+        padding: 10px
+        background-color: lighten($primery, 10%)
+        font-size: 11px
+        text-transform: uppercase
+        color: #fff
+        border: none
+        height: 30px
+    &-like
+        background-color: $primery
+        border: none
+        height: 30px
+        width: 30px
+        text-align: center
+        padding-top: 3px
+       
+       
     &:hover
         cursor: pointer
 .bg-secondary
@@ -53,6 +80,8 @@ input[type="checkbox"]
         text-align: center
     &__title
         margin-bottom: 100px
+.catalog
+    background-color: lighten($bg-seconsary, 3%)
 @media (max-width: 576px)
     .button-o
         font-size: 10px
