@@ -171,6 +171,9 @@ input[type="checkbox"]:checked + label:before {
 }
 
 @media (max-width: 576px) {
+  .button {
+    font-size: 10px;
+  }
   .button-o {
     font-size: 10px;
   }
@@ -466,6 +469,24 @@ input[type="checkbox"]:checked + label:before {
   }
 }
 
+@media (max-width: 400px) {
+  .form__row-checkbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .form__button {
+    height: 55px;
+  }
+  .form__checkbox {
+    margin-bottom: 15px;
+  }
+}
+
 .feature-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -656,6 +677,98 @@ input[type="checkbox"]:checked + label:before {
   }
   .blog__link-more {
     font-size: 12px;
+  }
+}
+
+.price {
+  background-color: #f1f1f1;
+}
+
+.price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.price-block__card {
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.price-card {
+  background-color: #fff;
+  position: relative;
+}
+
+.price-card_text {
+  padding: 20px;
+  font-size: 15px;
+}
+
+.price-card__title {
+  margin: 0;
+  font-family: 'Proxima Nova Light', sans-serif;
+}
+
+.price-card__cost {
+  font-size: 16px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.price-card__pricetag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price-card__button {
+  background-color: #fff;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 80px;
+  width: 100%;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  padding-top: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.price-card:hover .price-card__button {
+  z-index: 10;
+  bottom: -80px;
+}
+
+@media (max-width: 991px) {
+  .price-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .price-block__card {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .price__title {
+    margin-bottom: 50px;
+  }
+  .price-card_text {
+    font-size: 13px;
   }
 }
 /*# sourceMappingURL=style.css.map */
