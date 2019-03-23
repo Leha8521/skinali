@@ -680,10 +680,6 @@ input[type="checkbox"]:checked + label:before {
   }
 }
 
-.price {
-  background-color: #f1f1f1;
-}
-
 .price-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -769,6 +765,73 @@ input[type="checkbox"]:checked + label:before {
   }
   .price-card_text {
     font-size: 13px;
+  }
+}
+
+.steps {
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.steps-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.steps-block__step {
+  position: relative;
+}
+
+.steps-block__step:last-child:before {
+  display: none;
+}
+
+.steps-block__step:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #bab9b8;
+  display: block;
+  position: absolute;
+  top: 27%;
+  right: -63%;
+}
+
+.steps-block__title {
+  font-size: 18px;
+}
+
+.steps-block__text {
+  display: block;
+  max-width: 160px;
+  margin: auto;
+}
+
+@media (max-width: 991px) {
+  .steps-block__step:before {
+    display: none;
+  }
+  .steps-block__step {
+    margin-bottom: 30px;
+    width: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-block__step {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .steps-block__step {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

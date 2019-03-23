@@ -1,0 +1,47 @@
+.steps
+    text-align: center
+    background-color: #f1f1f1
+    
+    &-block
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        &__step
+            // max-width: 160px
+            position: relative
+            &:last-child
+                &:before
+                    display: none
+            &:before
+                content: ''
+                width: 100%
+                height: 2px
+                background-color: #bab9b8
+                display: block
+                position: absolute
+                top: 27%
+                right: -63%
+            
+        &__title
+            font-size: 18px
+        &__text
+            display: block
+            max-width: 160px
+            margin: auto
+@media (max-width: 991px)
+    .steps
+        &-block__step
+            &:before
+                display: none
+    .steps-block__step
+        margin-bottom: 30px
+        width: 33%
+@media (max-width: 768px)
+    .steps-block__step
+        width: 50%
+@media (max-width: 480px)
+    .steps-block__step
+        width: 100%
+        
+           
+    
