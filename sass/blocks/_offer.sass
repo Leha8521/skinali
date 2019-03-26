@@ -1,12 +1,20 @@
 .offer
     padding: 129px 0
     &-block
-        background: #fff url('../img/offer/offer-bg.png') no-repeat center right
-        background-size: contain
+        
+        
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
         padding: 80px
         width: 89%
         margin-top: -180px
+        &-price
+            margin-top: -170px
+        &_calc-bg
+            background: #fff url('../img/offer/offer-bg-calc.png') no-repeat center right
+            background-size: contain
+        &_price-bg
+            background: #fff url('../img/offer/offer-bg-price.png') no-repeat center right
+            background-size: contain
     &__title
         font-size: 25px
         text-transform: uppercase
@@ -16,6 +24,7 @@
         display: block
         font-size: 18px
         padding-bottom: 48px
+        max-width: 720px
 .form
     &__row
         display: flex
@@ -30,6 +39,8 @@
         padding-bottom: 15px
     &__group
         flex-basis: 33.33%
+        &-price
+            margin-right: 40px
     &__input
         width: 100%
         dorder: 1px solid
@@ -39,10 +50,23 @@
     &__button
         height: 80px
         width: 100%
+    &__policy
+        font-size: 14px
+        
 @media (max-width: 1199px)
     .offer
         &-block
             background-position: center right -120px
+@media (max-width: 991px)
+    .offer
+        &-block
+            background: none
+            background-color: #fff
+            width: 100%
+            margin-top: -280px
+            padding: 40px
+            &-price
+                margin-top: -150px
 @media (max-width: 768px)
     .offer
         &-block
@@ -51,6 +75,8 @@
             width: 100%
             margin-top: -280px
             padding: 40px
+            &-price
+                margin-top: -140px
         &__title
             font-size: 20px
             text-align: center
@@ -65,9 +91,11 @@
         &__contacts
             margin-bottom: 10px
     .input
+        margin-bottom: 10px
         height: 50px
 @media (max-width: 400px)
-     .form
+    
+    .form
         &__row
             &-checkbox
                 flex-direction: column
