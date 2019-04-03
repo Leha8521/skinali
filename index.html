@@ -7,6 +7,8 @@
     <title>Фабрика скинали</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
+    <link rel="stylesheet" href="css/slick.css">
 </head>
 <body>
     <header class="header">
@@ -75,7 +77,14 @@
                         <div class="form__row">
                             <div class="form__group">
                                 <label for="" class="form__label">Вид стекла</label>
-                                <input type="text" class="input form__input">
+                                <input type="hidden" name="type">
+                                    <div class="select form__select">
+                                        <!-- <div class="select_checked">С печатью</div>
+                                            <ul class="select__dropdown">
+                                                <li>С печатью</li>
+                                                <li>Без печати</li>
+                                            </ul> -->
+                                    </div>
                             </div>
                             <div class="form__group">
                                 <label for="" class="form__label">Ширина, см</label>
@@ -495,6 +504,51 @@
             </div>
         </section>
 
+        <section class="section before">
+            <div class="container">
+                <h2 class="section-title section__title">До и после</h2>
+                <!-- /.section-title section__title -->
+                <div class="before-slider-wrap">
+                    <div class="before-slider">
+                        <div class="before-slider__items">
+                            <div class="before-after">
+                                <img src="img/before/sample-before.png" alt="">
+                                <img src="img/before/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <!-- /.before-slider__items -->
+                        <div class="before-slider__items">
+                             <div class="before-after">
+                                <img src="img/before/sample-before.png" alt="">
+                                <img src="img/before/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <!-- /.before-slider__items -->
+                        <div class="before-slider__items">
+                             <div class="before-after">
+                                <img src="img/before/sample-before.png" alt="">
+                                <img src="img/before/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <!-- /.before-slider__items -->
+                    </div>
+                    <!-- /.before-slider -->
+                    <div class="before-slider-arrows">
+                        <botton class="arrow arrow-left">
+                            <img src="img/before/left.png" alt="">
+                        </botton>
+                        <botton class="arrow arrow-right">
+                            <img src="img/before/right.png" alt="">
+                        </botton>
+                    </div>
+                </div>
+                <!-- /.before-slider-wrap -->
+                
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.section -->
+
         <section class="section reviews">
             <div class="container">
                 <h2 class="section-title section__title">Отзывы наших клиентов</h2>
@@ -627,9 +681,83 @@
         <div class="map" id="map">
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A80764bbb088bed2b8580d8dca9c0c6978e2245e68da4629d521ab7f0a351b5f1&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
         </div>
+        <section class="section questions">
+            <div class="container">
+                <div class="questions-block">
+                    <h3 class="questions__title">Остались вопросы?</h3>
+                    <!-- /.questions__title -->
+                    <a href="#" class="questions__link">Задайте их менеджеру</a>
+                    <!-- /.questions__link -->
+                </div>
+                <!-- /.questions-block -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.section questions -->   
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-block">
+                <div class="footer__description">
+                    <h4 class="footer__title">Фабрика скинали №1</h4>
+                    <span class="footer__subtitle">ведущий производитель скинали</span>
+                    <span class="footer__copy">© Фабрика скинали №1</span>
+                </div>
+                <!-- /.footer__description -->
+                <div class="footer__pay-info">
+                    <img src="img/footer/web-maney.png" alt="" class="footer__pay-logo">
+                    <img src="img/footer/yandex-maneey.png" alt="" class="footer__pay-logo">
+                    <img src="img/footer/master-card-maney.png" alt="" class="footer__pay-logo">
+                    <img src="img/footer/visa-maney.png" alt="" class="footer__pay-logo">
+                </div>
+                <!-- /.footer__pay-info -->
+                <div class="footer__contacts">
+                    <a href="#" class="footer__phone">+7 777 418 70 25</a>
+                    <a href="#" class="footer__mail">scinali@mail.ru</a>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social__link">
+                            <img src="img/footer/tviter.png" alt=""></a>
+                        <a href="#" class="footer-social__link">
+                            <img src="img/footer/facebook.png" alt=""></a>
+                        <a href="#" class="footer-social__link">
+                            <img src="img/footer/vk.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- /.footer__contacts -->
+            </div>
+            <!-- /.footer-block -->
+        </div>
+        <!-- /.conyainer -->
+    </footer>
+    <!-- /.footer -->
 
     <!-- Добавление виджета обратной связи Spikmi -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=447"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        $(window).load(function() {
+        $(".before-after").twentytwenty({
+            before_label: 'Без скинали',
+            after_label: 'С скинали'
+        });
+
+        $('.before-slider').slick({
+            draggable: false,
+            dots: true,
+            dotsClass: 'before-slider__dots',
+            prevArrow: $('.arrow-left'),
+            nextArrow: $('.arrow-right')
+	
+            });
+        $('.menu_button').on('click', function() {
+            $('.menu').toggleClass('menu_activ')
+        });
+
+        });
+    </script>
 </body>
 </html>
